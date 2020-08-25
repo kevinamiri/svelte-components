@@ -1,0 +1,23 @@
+<p>Count: {count}</p>{input}
+
+<button style="color:orange;background-color:{input?'blue':'green'}" on:click='set({ count: count + 1, input: false })' on:mouseover='set({ input: false })' on:mouseout='set({ count: count - 1, input: true })'>+1</button>
+
+<!-- Default data -->
+<script>
+  export default {
+    data () {
+      return {
+        count: 0,
+        input: true,
+        color: "blue",
+      };
+    }
+  };
+</script>
+
+<!-- Include styles -->
+<style>
+  p, button {
+    font-family: Lato;
+  }
+</style>
